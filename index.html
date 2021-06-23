@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<div id="myQR"> </div>
+<head>
+    <script type="text/javascript" src="qrcode.js"></script>
+
+
+</head>
+
+<body>
+    <input id="text" type="text" />
+    <button type="button" onclick="makeQR()">Make QR CODE</button>
+    <div id="myQR"> </div>
+
+    <script type="text/javascript ">
+        function makeQR() {
+            const text1 = document.getElementById("text").value;
+            let qrcode = new QRCode(document.getElementById("myQR"), {
+                text: text1,
+                width: 128,
+                height: 128,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+        }
+    </script>
 
 </body>
+
 </html>
