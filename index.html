@@ -8,21 +8,33 @@
 </head>
 
 <body>
-    <input id="text" type="text" />
-    <button type="button" onclick="makeQR()">Make QR CODE</button>
-    <div id="myQR"> </div>
+    <form id="myForm">
+        <p id="error"> </p>
+        <input id="inputText" type="text" />
+        <button type="button" onclick="makeQR()">Make QR CODE</button>
+        <div id="myQR"> </div>
+
+    </form>
 
     <script type="text/javascript ">
         function makeQR() {
-            const text1 = document.getElementById("text").value;
-            let qrcode = new QRCode(document.getElementById("myQR"), {
-                text: text1,
-                width: 128,
-                height: 128,
-                colorDark: "#000000",
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
+            var valid = document.forms["myForm"]["inputText"].value;
+            if (valid == null || valid == "") {
+                document.getElementById("error").innerHTML = '<p style="color:red; font-size:15px;">Please enter a text</p>';
+                document.getElementById("myQR").innerHTML = "<style>display:none;</style>";
+            } else {
+                document.getElementById("myQR").innerHTML = "<style>display:none;</style>";
+                const text1 = document.getElementById("inputText").value;
+                var qrcode = new QRCode(document.getElementById("myQR"), {
+                    text: text1,
+                    width: 128,
+                    height: 128,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+                document.getElementById("error").innerHTML = "<style>display:none;</style>";
+            }
         }
     </script>
 
