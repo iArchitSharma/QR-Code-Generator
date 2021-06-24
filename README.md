@@ -1,5 +1,5 @@
 # QR-Code-Generator
-Create Static QR codes for free which will never expire.
+Create Static QR codes for free which will never expire. <a src="iarchitsharma.github.io/QR-Code-Generator">Use it online</a>
 
 ## Instructions for using the tool:
 First, enter the text or a link or any other type of info. Once you’re done, select “Generate” and then click on Download.
