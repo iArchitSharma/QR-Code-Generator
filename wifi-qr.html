@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="qrcode.js"></script>
+
+
+</head>
+
+<body>
+    <form id="WifiForm">
+        <p id="ssid-error"> </p>
+        <span>SSID</span>
+        <input id="SSID" type="text" />
+        <br>
+        <span>Password</span>
+        <input id="Password" type="text" />
+        <br>
+        <span>Encryption</span>
+        <select id="enc">
+            <option>WPA</option>
+            <option>WEP</option>
+         </select><br>
+        <span>Hidden</span>
+        <input type="checkbox" id="hidden">
+        <button type="button" onclick="WifiQR()">Make QR CODE</button>
+        <div id="qrwifi"> </div>
+
+    </form>
+
+
+
+</body>
+
+</html>

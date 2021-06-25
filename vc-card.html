@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="qrcode.js"></script>
+
+
+</head>
+
+<body>
+    <form id="VCForm">
+
+        <span>Full Name</span>
+        <input id="name" type="text" />
+        <br>
+        <span>Title</span>
+        <input id="title" type="text" />
+        <br>
+        <span>Company</span>
+        <input id="company" type="text" />
+        <br>
+        <span>Phone</span>
+        <input type="text" id="phone">
+        <br>
+        <span>URL</span>
+        <input id="url" type="text" />
+        <br>
+        <span>Address</span>
+        <input id="address" type="text" />
+        <br>
+        <span>Email</span>
+        <input id="email" type="text" />
+        <br>
+        <button type="button" onclick="VcardQR()">Make QR CODE</button>
+        <div id="vcqr"> </div>
+
+    </form>
+
+
+
+</body>
+
+</html>

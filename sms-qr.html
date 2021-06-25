@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="qrcode.js"></script>
+
+
+</head>
+
+<body>
+    <form id="SMSForm">
+        <p id="error"> </p>
+        <input id="phnumber" type="text" />
+        <input id="sms" type="text" />
+        <button type="button" onclick="smsQR()">Make QR CODE</button>
+        <br>
+        <div id="smsrs"> </div>
+
+    </form>
+
+    <script type="text/javascript">
+        function smsQR() {
+            var phnumber = document.getElementById("phnumber").value;
+            var sms = document.getElementById("sms").value;
+
+            var valid = document.forms["SMSForm"]["phnumber"].value;
+            if (valid == null || valid == "") {
+                document.getElementById("error").innerHTML = '<p style="color:red; font-size:15px;">Please enter a Phone no.</p>';
+                document.getElementById("smsrs").innerHTML = "<style>display:none;</style>";
+            } else {
+                document.getElementById("smsrs").innerHTML = "<style>display:none;</style>";
+
+                var qrcode = new QRCode(document.getElementById("smsrs"), {
+                    text: "smsto:" + phnumber + ":" + sms,
+                    width: 128,
+                    height: 128,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+                document.getElementById("error").innerHTML = "<style>display:none;</style>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
