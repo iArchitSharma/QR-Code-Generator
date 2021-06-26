@@ -36,7 +36,7 @@ function VcardQR() {
     document.getElementById("vcqr").innerHTML = "<style>display:none;</style>";
 
     var qrcode = new QRCode(document.getElementById("vcqr"), {
-        text: "BEGIN:VCARD\r\nVERSION:3.0\r\nN:" + name + "\r\nTITLE:" + title + "\r\nORG:" + company + "\r\nTEL:" + phone + "\r\nURL:" + url + "\r\nEMAIL:" + email + "\r\nADR:" + address + "END:VCARD",
+        text: "BEGIN:VCARD\r\nVERSION:3.0\r\nN:" + name + "\r\nTITLE:" + title + "\r\nORG:" + company + "\r\nTEL:" + phone + "\r\nURL:" + url + "\r\nEMAIL:" + email + "\r\nADR:" + address + "\r\nEND:VCARD",
         width: 128,
         height: 128,
         colorDark: "#000000",
