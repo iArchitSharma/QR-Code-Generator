@@ -13,9 +13,23 @@ html {
 }
 
 
+/* Main div class */
+
+.main {
+    background: #fff;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 40px;
+    width: auto;
+    max-width: 700px;
+}
+
+
 /* Style tab links */
 
-.tablink {
+
+/*.tablink {
     margin: 5px;
     background-color: #fff;
     color: black;
@@ -28,6 +42,24 @@ html {
     font-size: 17px;
     min-width: 10%;
     width: 18%;
+} */
+
+.tablink {
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #333;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 16px;
+    display: flex;
+    float: left;
+    margin: 5px;
+}
+
+#resp {
+    display: flex;
+    justify-content: center;
 }
 
 .tablink:hover {
