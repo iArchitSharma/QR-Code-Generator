@@ -8,17 +8,20 @@
 </head>
 
 <body>
+    <!-- Begin: Form for SMS -->
     <form id="SMSForm">
         <p id="error"> </p>
         <span>Enter Phone Number</span>
         <input id="phnumber" type="text" /><br>
         <span>Enter SMS</span>
         <input id="sms" type="text" />
+        <br>
         <button type="button" onclick="smsQR()">Make QR CODE</button>
         <br>
         <div id="smsrs"> </div>
 
     </form>
+    <!-- End: Form for SMS -->
 
     <script type="text/javascript">
         function smsQR() {
